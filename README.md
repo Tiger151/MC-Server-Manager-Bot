@@ -3,3 +3,5 @@ A discord bot used to manage a private server via discord.
 
 Must get a discord bot token.
 Must get command channel id.
+
+Uses JavaCord and JSON-Java

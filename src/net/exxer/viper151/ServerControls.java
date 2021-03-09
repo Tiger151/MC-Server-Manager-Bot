@@ -15,6 +15,8 @@ public class ServerControls {
 	private boolean isOnline = false;
 	private Bot bot;
 	
+	private final String STARTSCRIPT = "./start_server.sh"; 
+	
 	public ServerControls(DiscordApi api, Bot bot) {
 		this.api = api;
 		this.bot = bot;
@@ -39,7 +41,7 @@ public class ServerControls {
 		isOnline = false;
 		
 		try {
-			server = Runtime.getRuntime().exec("./start_server.sh");
+			server = Runtime.getRuntime().exec(STARTSCRIPT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -79,7 +81,7 @@ public class ServerControls {
 			api.updateActivity("Starting Server");
 
 			try {
-				server = Runtime.getRuntime().exec("./start_server.sh");
+				server = Runtime.getRuntime().exec(STARTSCRIPT);
 				isOnline = true;
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -166,7 +168,7 @@ public class ServerControls {
 		api.updateActivity("Starting Server");
 
 		try {
-			server = Runtime.getRuntime().exec("./start_server.sh");
+			server = Runtime.getRuntime().exec(STARTSCRIPT);
 			isOnline = true;
 		} catch (IOException e) {
 			e.printStackTrace();

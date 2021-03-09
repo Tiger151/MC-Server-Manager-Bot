@@ -21,7 +21,7 @@ public class Bot {
 	}
 	
 	private final long CHANNEL = 0L;      //Command Channel ID
-	private final String TOKEN = "";	//Bot Token
+	private final String TOKEN = "";	  //Bot Token
 	
 	private TextChannel commandChannel;
 	

@@ -87,7 +87,7 @@ public class Bot {
 				}
 			}
 		});
-		api.getTextChannelById(515020547696885784L).get().sendMessage(new EmbedBuilder()
+		commandChannel.sendMessage(new EmbedBuilder()
 				.setDescription("The server will start shortly.")
 				.setColor(Color.YELLOW)
 				.setTitle("Starting Server...")
